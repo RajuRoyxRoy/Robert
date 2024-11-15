@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Attendance Management</title>
+    <link rel="stylesheet" href="attendance.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>📅 Attendance Dashboard</h2>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h1>Attendance Management</h1>
+
+            <!-- Attendance Section -->
+            <div class="attendance-section">
+                <label for="employee-select">Select Employee:</label>
+                <select id="employee-select">
+                    <option value="1">John Doe</option>
+                    <option value="2">Jane Smith</option>
+                    <option value="3">Alice Johnson</option>
+                    <option value="4">Bob Brown</option>
+                </select>
+                <input type="date" id="attendance-date" value="">
+                <label for="extra-hours">Extra Hours:</label>
+                <input type="number" id="extra-hours" min="0" max="12" value="0">
+                <button class="btn mark-attendance" onclick="markAttendance()">Mark Present</button>
+            </div>
+
+            <!-- Total Attendance Report -->
+            <h2>Total Attendance Report</h2>
+            <table id="total-report">
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Total Attendance Days</th>
+                        <th>Total Extra Hours</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <!-- Attendance Dates -->
+            <h2>Attendance Dates</h2>
+            <table id="attendance-dates">
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Date</th>
+                        <th>Extra Hours</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <!-- Monthly Report Chart -->
+            <h2>Monthly Attendance Report</h2>
+            <canvas id="monthly-chart"></canvas>
+
+            <!-- Print Attendance Button -->
+            <button class="btn print-report" onclick="printReport()">🖨️ Print Report</button>
+        </main>
+    </div>
+
+    <script src="attendance.js"></script>
+</body>
+</html>
