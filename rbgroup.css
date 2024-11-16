@@ -1,3 +1,7 @@
+:root{
+    --blue-color : #1a4b8c;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +18,7 @@
 /* Sidebar Styles */
 .sidebar {
     width: 250px;
-    background: #1a4b8c;
+    background: var(--blue-color);
     color: white;
     padding: 20px;
     transition: 0.3s;
@@ -24,13 +28,14 @@
     text-align: center;
     padding: 20px 0;
     margin-bottom: 30px;
+    border-bottom: 1px solid white;
 }
 
 .logo-container img {
-    width: 180px;
-    height: 180px;
-    margin-bottom: 10px;
+    width: 100px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
+
 }
 
 .sidebar-menu {
@@ -64,42 +69,143 @@
 /* Main Content Styles */
 .main-content {
     flex: 1;
-    padding: 40px;
     background: #f4f6f9;
+}
+
+.main-content .header{
+    width: 100%;
+    height: fit-content;
+    min-height: 10%;
+    background-color: white;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.main-content .header .search{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.main-content .header .search {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid gray;
+    
+    padding-left: 10px;
+}
+
+.main-content .header .search input{
+    padding: 5px 10px;
+    border: none;
+}
+
+.main-content .header .search input:focus{
+    outline: none;
+}
+
+.main-content .header .search button{
+    padding: 5px 15px;
+    border: none;
+    background-color: var(--blue-color);
+    color: white;
+    cursor: pointer;
+    height: 100%;
+
+
+}
+
+.main-content .header .profile{
+   display: flex;
+   align-items: center;
+}
+
+.main-content .header .profile .profile-avatar{
+    height: 40px;
+    aspect-ratio: 1/1;
+    background-color: rgb(221, 221, 221);
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    cursor: pointer;
+
+}
+.main-content .header .profile .name{
+    font-size: large;
+    font-weight: 600;
+}
+
+.main-content .dashboard-text{
+    padding: 20px;
+}
+
+.main-content .dashboard-text h1{
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.main-content .dashboard-text p{
+    color: grey;
+    font-weight: 500;
+    font-size: 3vh;
+    
 }
 
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 25px;
 }
 
 .card {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    /* border-radius: 10px; */
+    border: 1px solid rgb(180, 180, 180);
     text-align: center;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
+/* .card:hover {
+    transform: scale(1.01);
 
-.card i {
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: #1a4b8c;
+} */
+
+.card .icon {
+    padding: 5px ;
+    border-radius: 50%;
+    width: 50px;
+    aspect-ratio: 1/1;
+    /* border: 1px solid grey; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.card .icon i {
+    font-size: 25px;
+    color: black;
+    padding: 5px;
+    aspect-ratio: 1/1;
+  
 }
 
 .card h3 {
     color: #333;
     margin-bottom: 15px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /* Responsive Design */
