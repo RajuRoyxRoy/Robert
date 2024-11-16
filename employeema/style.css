@@ -1,33 +1,83 @@
+/* Base styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fb;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e8f1f8;
+    color: #333;
     padding: 20px;
+    margin: 0;
 }
 
+/* Container styles */
 .container {
     max-width: 900px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation button styles */
 nav button {
-    margin: 5px;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
+    margin: 10px;
+    padding: 12px 20px;
+    background-color: #0066cc;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+nav button:hover {
+    background-color: #004a99;
+}
+
+/* Section styles */
 .section {
     display: none;
-    margin-top: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #0066cc;
+    border-radius: 5px;
 }
 
 .section.active {
     display: block;
+}
+
+/* Typography enhancements */
+h1, h2, h3 {
+    color: #004a99;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Form enhancements */
+form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: calc(100% - 22px);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #218838;
 }
