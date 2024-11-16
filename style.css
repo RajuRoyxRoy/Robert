@@ -1,0 +1,128 @@
+        :root{
+            --font :  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --light-grey: #fbfbfb;
+
+        }
+        
+        /* Existing styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: var(--font);
+            background: radial-gradient(circle, rgba(0,212,255,1) 1%, rgba(155,138,229,1) 84%);
+            background-color: #71b7e6;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-container {
+            background: var(--light-grey);
+            padding: 20px 30px;
+            width: 350px;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            text-align: center;
+        }
+        .login-container .logo{
+          
+            border: 1px solid black;
+            align-self: center;
+            border-radius: 50%;
+        }
+        .login-container h2 {
+            margin-bottom: 15px;
+            font-size: 1em;
+            color: #333;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 10px;
+            text-align: left;
+            font-family: var(--font);            
+        }
+        .form-group label {
+            font-size: 14px;
+            color: #666;
+            display: block;
+            margin-bottom: 3px;
+            font-weight: 500;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            font-family: var(--font);
+
+        }
+        .form-group input:focus{
+            outline: none;
+        }
+        .form-group input[type="text"], .form-group input[type="password"] {
+            border-radius: 10px; /* pill shape */
+            padding: 10px;
+        }
+        .form-group select {
+            border-radius: 10px; /* pill shape */
+            padding: 10px;
+            background: #fff;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: #9b59b6;
+        }
+        .login-button {
+            width: 200px; /* set a fixed width of 200 pixels */
+            padding: 12px;
+            background-color: #9b59b6;
+            color: white;
+            border: none;
+            border-radius: 5px; /* pill shape */
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            font-family: var(--font);
+            font-weight: bold;
+        }
+        .login-button:hover {
+            background-color: #8e44ad;
+        }
+        /* .login-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            z-index: -1;
+        } */
+        .login-container .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .form-group select {
+            background: #fff;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        .form-group select:focus {
+            outline: none;
+        }
