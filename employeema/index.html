@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏢 Office Employee Management System</h1>
+        </header>
+        <nav>
+            <button onclick="showSection('add-employee')">➕ Add Employee</button>
+            <button onclick="showSection('employee-details')">📋 Employee Details</button>
+            <button onclick="showSection('delete-employee')">🗑️ Delete Employee</button>
+            <button onclick="showSection('salary-deduction')">💸 Salary Deduction</button>
+            <button onclick="showSection('calculate-salary')">🧾 Calculate Salary</button>
+        </nav>
+
+        <!-- Add Employee Section -->
+        <section id="add-employee" class="section active">
+            <h2>Add New Employee</h2>
+            <form onsubmit="addEmployee(event)">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="fatherName" placeholder="Father's Name" required>
+                <input type="number" id="age" placeholder="Age" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="text" id="pan" placeholder="PAN Card" required>
+                <input type="text" id="aadhar" placeholder="Aadhar Card" required>
+                <input type="number" id="salary" placeholder="Base Salary" required>
+                <button type="submit">Add Employee</button>
+            </form>
+        </section>
+
+        <!-- Employee Details Section -->
+        <section id="employee-details" class="section">
+            <h2>Employee Directory</h2>
+            <ul id="employee-list"></ul>
+            <div id="employee-details-display"></div>
+        </section>
+
+        <!-- Delete Employee Section -->
+        <section id="delete-employee" class="section">
+            <h2>Delete Employee</h2>
+            <select id="delete-employee-list"></select>
+            <button onclick="deleteEmployee()">Delete</button>
+        </section>
+
+        <!-- Salary Deduction Section -->
+        <section id="salary-deduction" class="section">
+            <h2>Salary Deduction</h2>
+            <select id="deduct-employee-list"></select>
+            <input type="number" id="deduction-amount" placeholder="Deduction Amount" required>
+            <input type="datetime-local" id="deduction-date" required>
+            <button onclick="applyDeduction()">Apply Deduction</button>
+        </section>
+
+        <!-- Calculate Salary Section -->
+        <section id="calculate-salary" class="section">
+            <h2>Calculate Final Salary</h2>
+            <select id="salary-employee-list"></select>
+            <button onclick="calculateFinalSalary()">Calculate</button>
+            <div id="salary-output"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
