@@ -39,7 +39,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             if (company === 'admin') {
                 window.location.href = 'admin.html';
             } else if (company === 'rb_motors') {
-                window.location.href = 'rb-motors.html'; // Replace with the actual dashboard URL
+                window.location.href = 'rbgroup.html'; // Replace with the actual dashboard URL
             } else if (company === 'rb_station') {
                 window.location.href = 'rb-filling-station.html'; // Replace with the actual dashboard URL
             } else if (company === 'sb_station') {
